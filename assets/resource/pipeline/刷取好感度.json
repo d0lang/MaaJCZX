@@ -1,0 +1,148 @@
+{
+    "刷取好感度": {
+        "recognition": "OCR",
+        "expected": [
+            "开始战斗"
+        ],
+        "action": "Click",
+        "target": [
+            1060,
+            660
+        ],
+        "focus": "成功点击了主页",
+        "next": [
+            "周本奖励已满",
+            "刷取好感度",
+            "周本奖励未满"
+        ]
+    },
+    "周本奖励已满": {
+        "recognition": "OCR",
+        "expected": [
+            "开启"
+        ],
+        "action": "Click",
+        "next": [
+            "点击开始行动",
+            "周本奖励已满"
+        ]
+    },
+    "周本奖励未满": {
+        "enabled": false
+    },
+    "点击开始行动": {
+        "recognition": "OCR",
+        "expected": [
+            "开始行动"
+        ],
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "点击开始行动",
+            "移动第一步"
+        ]
+    },
+    "移动第一步": {
+        "recognition": "OCR",
+        "expected": [
+            "作战任务"
+        ],
+        "roi": [
+            41,
+            578,
+            213,
+            126
+        ],
+        "action": "Click",
+        "target": [
+            560,
+            360
+        ],
+        "post_delay": 1500,
+        "next": [
+            "移动第二步"
+        ]
+    },
+    "移动第二步": {
+        "action": "Click",
+        "target": [
+            660,
+            200
+        ],
+        "next": [
+            "结束第一次战斗"
+        ],
+        "interrupt": []
+    },
+    "结束第一次战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "战斗胜利"
+        ],
+        "action": "Click",
+        "next": [
+            "结束第一次战斗",
+            "打第二个怪"
+        ]
+    },
+    "打第二个怪": {
+        "recognition": "OCR",
+        "expected": [
+            "作战任务"
+        ],
+        "roi": [
+            41,
+            578,
+            213,
+            126
+        ],
+        "action": "Click",
+        "target": [
+            780,
+            350
+        ],
+        "next": [
+            "结束第二次战斗"
+        ],
+        "interrupt": []
+    },
+    "结束第二次战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "战斗胜利"
+        ],
+        "action": "Click",
+        "next": [
+            "结束第二次战斗",
+            "点击返回"
+        ]
+    },
+    "点击返回": {
+        "recognition": "TemplateMatch",
+        "template": "返回键.png",
+        "roi": [
+            23,
+            15,
+            160,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "确定返回",
+            "点击返回"
+        ],
+        "interrupt": []
+    },
+    "确定返回": {
+        "recognition": "OCR",
+        "expected": [
+            "确定"
+        ],
+        "action": "Click",
+        "next": [
+            "刷取好感度"
+        ],
+        "post_delay": 4000,
+        "interrupt": []
+    }
+}

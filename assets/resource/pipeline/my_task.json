@@ -1,7 +1,0 @@
-{
-    "点击等级": {
-        "recognition": "TemplateMatch",
-        "template": "等级.png",
-        "action": "Click"
-    }
-}
